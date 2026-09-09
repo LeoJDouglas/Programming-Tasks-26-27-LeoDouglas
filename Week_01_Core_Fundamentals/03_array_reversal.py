@@ -18,6 +18,14 @@ def main():
     # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
     pass
 
+import random
 
 if __name__ == "__main__":
+    new = []
+    num = random.sample(range(1, 100), 10)
+    print(num)
+    for i in range(len(num)):
+        new.append(num[9-i])
+    print(new)
+
     main()
