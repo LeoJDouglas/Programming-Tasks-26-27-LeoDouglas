@@ -20,4 +20,42 @@ def main():
 
 
 if __name__ == "__main__":
+    num = []
+    lis = input("Enter a list of numbers. ")
+    num = lis.split()
+    smlnum = int(num[0])
+    number = int(num[0])
+    for i in range(len(num)):
+        if int(num[i]) > number:
+            number = int(num[i])
+    for i in range(len(num)):
+        if int(num[i]) < smlnum:
+            smlnum = int(num[i])
+    print("The largest number is: " + str(number))
+    print("The smallest number is: " + str(smlnum))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     main()
