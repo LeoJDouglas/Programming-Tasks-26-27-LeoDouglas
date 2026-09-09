@@ -15,10 +15,21 @@ TODO:
 """
 
 def main():
-    ### Leo's first commit
     pass
 
 
 
 if __name__ == "__main__":
-    main()
+    number = 0
+    total = 0
+    mean = 0
+    num = []
+    addit = input("Enter a list of numbers. ")
+    num = addit.split()
+    lengthnum = len(num)
+    for i in range(lengthnum):
+        total = total + int(num[number])
+        number = number + 1
+    mean = total / len(num)
+    print("The average is: " + str(mean))
+main()
