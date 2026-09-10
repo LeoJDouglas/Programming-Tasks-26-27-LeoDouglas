@@ -20,4 +20,20 @@ def main():
 
 
 if __name__ == "__main__":
+    sentence = input("Enter a sentence: ")
+    word = []
+    currentword = ""
+    for i in sentence:
+        if i == " ":
+            word.append(currentword)
+            currentword = ""
+        else:
+            currentword += i
+    print("The number of words is: " + str(len(word)))
+    print("The list of words is: " + str(word))
+
+
+
+
+
     main()
