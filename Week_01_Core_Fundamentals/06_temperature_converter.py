@@ -20,4 +20,14 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    temp = input("Enter the temperature: ")
+    unit = input("Farenheit or Celsius? ")
+    if unit.lower() == "farenheit":
+        celsius = int(temp) - 32
+        celsius = celsius * 5/9
+        print("The temperature in Celsius is: " + str(celsius))
+    elif unit.lower() == "celsius":
+        farenheit = int(temp) * 9/5
+        farenheit = farenheit + 32
+        print("The temperature in Farenheit is: " + str(farenheit))
+main()
