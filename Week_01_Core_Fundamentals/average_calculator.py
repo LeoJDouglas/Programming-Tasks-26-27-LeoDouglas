@@ -15,11 +15,6 @@ TODO:
 """
 
 def main():
-    pass
-
-
-
-if __name__ == "__main__":
     number = 0
     total = 0
     mean = 0
@@ -32,4 +27,9 @@ if __name__ == "__main__":
         number = number + 1
     mean = total / len(num)
     print("The average is: " + str(mean))
-main()
+    pass
+
+
+
+if __name__ == "__main__":
+    main()
