@@ -11,11 +11,20 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+    recording = []
+    file = open("cano.txt", "r")    
+    num = 0
+    word = input()
+    for i in range(985):
+        record = file.readline()
+        recording = record.split()
+        for i in range(len(recording)):
+            if recording[i] == word:
+                num = num + 1
+    file.close() 
+    print(num)
 
+    pass
 
 if __name__ == "__main__":
     main()

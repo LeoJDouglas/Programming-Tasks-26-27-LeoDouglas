@@ -2,7 +2,7 @@
 TASK: 05 Shopping List
 
 # Skills: Loops, lists
-Allow the user to add itemds to a shopping list until they type DONE
+Allow the user to add items to a shopping list until they type DONE
 When they type DONE, print the list and ask if they want to edit any item.
 They should select an item by number and allow them to ammend the item.
 
@@ -12,11 +12,26 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    list = []
+    stop = input("Enter food for list: ")
+
+    while stop.lower() != "done":
+        print(list)
+        list.append(stop)
+        stop = input()
+        
+    edit = input("Would you like to change any of your list? ")
+    if edit.lower() == "yes":
+        print(list)
+        num = int(input())
+        
+        change = input()
+        list[num - 1] = change
+        print(list)
+        
     pass
 
 
 if __name__ == "__main__":
+
     main()

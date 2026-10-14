@@ -12,9 +12,20 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    peek = 4
+    length = 4
+    queue = ["josh", "chris", "dan", "harry"]
+    answer = input()
+    while answer.lower() == "yes":
+        queue.remove(queue[3])
+        name = input()
+        queue.insert(0, name)
+        if peek < length:
+            peek = length
+        print(queue)
+        print(peek)    
+        answer = input()
+    
     pass
 
 

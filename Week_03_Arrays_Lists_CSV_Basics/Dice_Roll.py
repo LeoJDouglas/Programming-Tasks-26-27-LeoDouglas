@@ -16,9 +16,17 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    import random
+    list = []
+    total = 0
+    x = int(input("How many rolls? "))
+    for i in range(x):
+        num = random.randint(0,6)
+        list.append(num)
+    for i in range(x):
+        temp = list[i]
+        total = total + int(temp)
+    print(total)
     pass
 
 
