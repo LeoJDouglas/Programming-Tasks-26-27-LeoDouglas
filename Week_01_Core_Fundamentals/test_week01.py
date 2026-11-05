@@ -21,7 +21,7 @@ HOW TO RUN
 
 YOUR JOB IN THIS FILE
 ─────────────────────
-Everywhere you see a # TODO comment, you need to fill in:
+Everywhere you see a #  comment, you need to fill in:
     - The function call  →  what function are you testing?
     - The test data      →  what values are you passing in?
     - The expected result→  what should the function return?
@@ -33,11 +33,11 @@ The first test in each section has been completed as an example.
 import pytest
 
 from average_calculator   import calculate_average
-from min_max_finder       import find_min, find_max
+from min_max_finder       import find_minfind_max
 from array_reversal       import reverse_array
 from linear_search        import linear_search
-from string_parser        import count_words, is_palindrome
-from temperature_converter import celsius_to_fahrenheit, fahrenheit_to_celsius
+from string_parser        import count_words
+from temperature_converter import celsius_to_fahrenheit
 
 
 # ╔═════════════════════════════════════════════════════════════════════════╗
@@ -60,10 +60,10 @@ class TestAverageCalculator:
     # ── CORE ──────────────────────────────────────────────────────────────
 
     def test_average_of_two_numbers(self):
-        # TODO: call calculate_average() with two numbers that give a whole number average
+        # T: call calculate_average() with two numbers that give a whole number average
         # e.g. calculate_average([???, ???]) == ???
-        assert calculate_average(  # TODO
-        ) == # TODO
+        assert calculate_average(  #
+        ) == #
 
     def test_average_single_value(self):
         # TODO: a list with one value should return that value as a float

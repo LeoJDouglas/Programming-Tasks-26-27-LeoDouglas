@@ -12,7 +12,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def count_words():
     sentence = input("Enter a sentence: ")
         word = []
         currentword = ""
@@ -28,7 +28,7 @@ def main():
 
 
 if __name__ == "__main__":
-    
+
 
 
 

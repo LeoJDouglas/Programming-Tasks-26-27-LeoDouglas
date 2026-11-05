@@ -14,9 +14,40 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    lines = 0
+    words = 0
+    char = 0
+    freq = ""
+    frequency = 0
+    file = open("cano.txt", "r")
+    record = file.readline()
+    while record != "":
+        tempwords = []
+        lines += 1
+        temp = record.strip(" ").split(" ")
+        frequent(temp)
+        for i in range(len(temp)):
+            count = len(temp[i])
+            char += count
+        length = len(temp)
+        words += length
+        record = file.readline()
+
+    def frequent(temp):
+        word = [["",0]]
+        for i in range(len(word)):
+            if temp[i] == word [i][0]:
+                word[i][0] += 1
+            else:
+                word.append([[temp[i], 0]])
+        num = 0
+        for i in range(len(word)):
+            if word[i]
+
+
+    print("characters = " + str(char))
+    print("lines = " + str(lines))
+    print("words = " + str(words))
     pass
 
 

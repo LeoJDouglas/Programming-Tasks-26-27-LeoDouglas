@@ -14,7 +14,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def calculate_average():
     number = 0
     total = 0
     mean = 0

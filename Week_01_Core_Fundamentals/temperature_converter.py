@@ -12,7 +12,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def celsius_to_fahrenheit():
     temp = input("Enter the temperature: ")
         unit = input("Farenheit or Celsius? ")
         if unit.lower() == "farenheit":
@@ -23,8 +23,8 @@ def main():
             farenheit = int(temp) * 9/5
             farenheit = farenheit + 32
             print("The temperature in Farenheit is: " + str(farenheit))
-    
+
 
 if __name__ == "__main__":
-    
+
 main()

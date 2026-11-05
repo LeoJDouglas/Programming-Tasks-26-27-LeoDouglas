@@ -12,7 +12,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def find_minfind_max():
     num = []
         lis = input("Enter a list of numbers. ")
         num = lis.split()

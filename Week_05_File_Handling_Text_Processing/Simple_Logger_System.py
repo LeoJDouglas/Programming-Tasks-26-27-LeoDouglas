@@ -13,9 +13,39 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+
+
+    def add():
+        file = open("logs.txt", "a+")
+        text = input("what would you like to add")
+        time = input("what is the time")
+        log = text + "," + time
+        file.write(log + "\n")
+        file.close()
+
+    def view():
+        file = open("logs.txt", "r")
+        record = file.readline()
+        print(record)
+        while record != "":
+            print(record)
+            record = file.readline()
+        file.close()
+
+    def clear():
+        file = open("logs.txt", "w")
+        file.close()
+
+    choice = input("add / view / clear? ")
+    while choice != "":
+        if choice == "add":
+            add()
+        elif choice == "view":
+            view()
+        elif choice == "clear":
+            clear()
+        choice = input("add / view / clear? ")
+
     pass
 
 

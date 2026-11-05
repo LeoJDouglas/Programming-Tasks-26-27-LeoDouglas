@@ -12,7 +12,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def reverse_array():
     import random
     new = []
     num = random.sample(range(1, 100), 10)

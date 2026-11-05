@@ -13,7 +13,7 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+def linear_search():
     mport string
     import random
     if __name__ == "__main__":
@@ -25,5 +25,5 @@ def main():
                 num.append(i)
         print("The target value is found at index: " + str(num))
     pass
-if __name__ == "__main__":   
+if __name__ == "__main__":
     main()
