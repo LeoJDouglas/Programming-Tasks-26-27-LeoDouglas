@@ -1,19 +1,28 @@
 """
 TASK: 03 Multi-Dimension Array Rotation
 
-# Rotate a 2D matrix 90 degrees clockwise manually
+# Rotate a 2D matrix 90 degrees clockwise
 Good luck
 
 TODO:
 - Fill in functions
 - Add demonstration code under `if __name__ == "__main__":`
 """
-
+import numpy as np
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+
+    matrix = [[1, 2, 3],
+             [4, 5, 6],
+             [7, 8, 9]]
+
+    # Rotate 90 degrees Clockwise
+    # 1. matrix[::-1] reverses the rows
+    # 2. zip(*...) transposes rows into columns
+    cw_matrix = [list(row) for row in zip(*matrix[::-1])]
+
+    # Rotate 90 degrees Counterclockwise
+    ccw_matrix = [list(row) for row in zip(*matrix)][::-1]
+
 
 
 if __name__ == "__main__":

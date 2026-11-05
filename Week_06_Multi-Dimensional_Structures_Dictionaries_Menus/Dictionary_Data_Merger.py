@@ -11,8 +11,14 @@ TODO:
 - Add demonstration code under `if __name__ == "__main__":`
 """
 
-def main():
+from Dictionary_File import supermarket_stock
+from Dictionary_File import furniture_stock
 
+
+def main():
+    super = supermarket_stock.copy()
+    super.update(furniture_stock)
+    print(super)
     pass
 
 
