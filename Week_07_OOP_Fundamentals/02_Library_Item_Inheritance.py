@@ -15,11 +15,22 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+    class item:
+        def __init__(self, title, year):
+           self.title = title
+           self.year = year
+    class book(item):
+        def __init__(self, title, year, author):
+           self.author = author
+           super().__init__(title, year)
+    class dvd(item):
+        def __init__(self, title, year, director):
+           self.director = director
+           super().__init__(title, year)
 
-
+    myitem = book("Harry Potter", 2026, "JK Rowling")
+    print(myitem.title)
+    print(myitem.year)
+    print(myitem.author)
 if __name__ == "__main__":
     main()
