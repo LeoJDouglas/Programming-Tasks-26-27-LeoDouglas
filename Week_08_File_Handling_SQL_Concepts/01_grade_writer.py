@@ -1,5 +1,5 @@
 """
-TASK: 01 Grade Writer 
+TASK: 01 Grade Writer
 
 # Purpose is to write a grade uploading program for csv files
 Ask the user for student names and ages, with a keyword to stop.
@@ -11,9 +11,19 @@ TODO:
 """
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    txt = open("grades.txt", "w")
+    csv = open("grades.csv", "w")
+    name = input("what is their name? ")
+    while name != "stop":
+        grade = input("what is the grade? ")
+        temp = name + " " + grade
+        txt.write(temp + "\n")
+        csv.write(temp + "\n")
+        name = input("what is their name? ")
+    txt.close()
+    csv.close()
+
+
     pass
 
 
