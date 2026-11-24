@@ -12,11 +12,35 @@ TODO:
 - Fill in functions
 - Add demonstration code under `if __name__ == "__main__":`
 """
+import sqlite3
 
 def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
+    conn = sqlite3.connect("Inventory.db")
+    cursor = conn.cursor()    
+    #creates database file and connects to it
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS items (
+            name TEXT PRIMARY KEY,
+            quantity INTEGER
+        )
+    """)
+    #creates table
+    name = input()
+    while name != "":
+        quantity = int(input())
+        cursor.execute(
+        "INSERT INTO items (name, quantity) VALUES (?, ?)",
+        (name, quantity)
+        )
+        name = input()
+    #add data to table
+    conn.commit()
+    #saves data to the file
+    cursor.execute("SELECT * FROM items")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+    conn.close()
     pass
 
 
